@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Roboto+Slab');
+
+
+$mwidth: 70vw;
+$mheight: 30vw;
+$fsize: 4vw;
+
+.maintenence {
+  position: absolute;
+
+  height: $mheight;
+
+  top:50%;
+  margin-top: -$mheight/2;
+
+  left:50%;
+
+}
+
+@media (min-width: 450px){
+  .maintenence {
+    width: $mwidth;
+    margin-left: -$mwidth/2;
+  }
+}
+@media (max-width: 450px){
+  .maintenence {
+    width: 90vw;
+    margin-left: -45vw;
+  }
+}
+
+.caption {
+  position: relative;
+  color: white;
+  width: 100%;
+  font-size: $fsize;
+
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  animation-name: fadein;
+  animation-duration: 10s;
+}
+.social {
+  font-family: 'Indie Flower', cursive;
+  //background-color:rgba(255,255,255,0.1);
+  border-radius: 3px;
+  font-size: 25px;
+  color:white;
+  width: 100%;
+  text-align: center;
+  animation: fastfadein;
+  animation-duration: 8s;
+  margin-top: 50px;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+  padding: 1px;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,1);
+
+  //fill:#FFF;
+}
+.social img:hover {
+  background-color: rgba(255,255,255,0.6);
+}
+.social p, .social a {
+  display: inline-block;
+}
+.social p {
+  margin-right: 10px;
+}
+.bottomlinks {
+  position: absolute;
+  width: 100%;
+  bottom:0px;
+  font-family: 'helvecia',sans-serif;
+
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  p,a {
+    display: inline-block;
+    margin: 5px;
+  }
+}
+
+@keyframes fadein {
+    0%   {color: black;}
+    15%  {color: black;}
+    100% {color: white;}
+}
+
+@keyframes fastfadein {
+    0%   {opacity: 0;}
+    90%  {opacity: 0;}
+    100% {opacity: 1;}
+}

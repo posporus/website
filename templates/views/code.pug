@@ -1,0 +1,26 @@
+extends ../layouts/default
+
+block intro
+	.container
+		h1 CODEYPO
+
+block content
+	.container
+		if keySubmitted && keyValid
+			p Thank you. You can now download your files.
+			a(href='../download?key='+ key +'&id=5aac631347244c56ec6f8da0') Download
+			each item in downloads
+				li= item.name
+				//downloads[0].name
+		else if keySubmitted && !keyValid
+			p Key not valid or has already been used.
+		else
+
+			form(method='post')
+				input(type='hidden', name='action', value='code')
+				.form-group
+					label Code
+					input(type='text', name='code', value=formData['code'])
+				.form-actions
+					button(type='submit').btn.btn-primary Send
+			p= keyValid
