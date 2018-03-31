@@ -10,8 +10,8 @@ var keystone = require('keystone');
 // and documentation.
 
 keystone.init({
-	'name': 'testoast',
-	'brand': 'testoast',
+	'name': 'gandolf',
+	'brand': 'gandolf',
 
 	'sass': 'public',
 	'static': 'public',
