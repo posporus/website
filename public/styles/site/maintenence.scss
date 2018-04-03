@@ -2,7 +2,7 @@
 
 
 $mwidth: 70vw;
-$mheight: 30vw;
+$mheight: 30vh;
 $fsize: 4vw;
 
 .maintenence {
@@ -17,19 +17,20 @@ $fsize: 4vw;
 
 }
 
-@media (min-width: 450px){
+//@media (min-width: 450px){
   .maintenence {
     width: $mwidth;
     margin-left: -$mwidth/2;
   }
-}
+//}
+/*
 @media (max-width: 450px){
   .maintenence {
     width: 90vw;
     margin-left: -45vw;
   }
 }
-
+*/
 .caption {
   position: relative;
   color: white;
@@ -39,7 +40,7 @@ $fsize: 4vw;
   font-family: 'Roboto Slab', serif;
   text-align: center;
   animation-name: fadein;
-  animation-duration: 10s;
+  animation-duration: 9s;
 }
 .social {
   font-family: 'Indie Flower', cursive;
@@ -89,9 +90,9 @@ $fsize: 4vw;
 }
 
 @keyframes fadein {
-    0%   {color: black;}
-    15%  {color: black;}
-    100% {color: white;}
+    0%   {color: black; filter: blur(10px); opacity: 0;}
+    10%  {color: black; filter: blur(2px); opacity: 1;}
+    100% {color: white; filter: blur(0px)}
 }
 
 @keyframes fastfadein {
