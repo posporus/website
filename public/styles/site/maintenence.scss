@@ -1,8 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Roboto+Slab');
+//@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Roboto+Slab');
+@font-face {
+    font-family: DeJaVuDL;
+    src: url('./../fonts/dejavusans-bold-webfont.woff');
+    //src: url('./../fonts/dejavusans.ttf');
+}
 
 
 $mwidth: 70vw;
-$mheight: 30vh;
+$mheight: 90vh;
 $fsize: 4vw;
 
 .maintenence {
@@ -14,6 +19,17 @@ $fsize: 4vw;
   margin-top: -$mheight/2;
 
   left:50%;
+
+  .logo {
+    position: relative;
+    left: 50%;
+
+    width: 150px;
+    height: 150px;
+    margin:50px;
+    margin-left: -75px;
+    //vertical-align: middle;
+  }
 
 }
 
@@ -37,8 +53,9 @@ $fsize: 4vw;
   width: 100%;
   font-size: $fsize;
 
-  font-family: 'Roboto Slab', serif;
+  font-family: /*'DejaVu Sans',*/'DeJaVuDL', sans-serif;
   text-align: center;
+  //font-weight: bold;
   animation-name: fadein;
   animation-duration: 9s;
 }
@@ -61,7 +78,7 @@ $fsize: 4vw;
   margin: 3px;
   padding: 1px;
   border-radius: 5px;
-  background-color: rgba(255,255,255,1);
+  //background-color: rgba(255,255,255,1);
 
   //fill:#FFF;
 }
@@ -71,14 +88,14 @@ $fsize: 4vw;
 .social p, .social a {
   display: inline-block;
 }
-.social p {
+/*.social p {
   margin-right: 10px;
-}
+}*/
 .bottomlinks {
   position: absolute;
   width: 100%;
   bottom:0px;
-  font-family: 'helvecia',sans-serif;
+  font-family: sans-serif;
 
   text-align: center;
   font-size: 10px;
@@ -86,12 +103,13 @@ $fsize: 4vw;
   p,a {
     display: inline-block;
     margin: 5px;
+    color: white;
   }
 }
 
 @keyframes fadein {
-    0%   {color: black; filter: blur(10px); opacity: 0;}
-    10%  {color: black; filter: blur(2px); opacity: 1;}
+    0%   {color: #cd472a; filter: blur(10px); opacity: 0;}
+    10%  {color: #c33825; filter: blur(2px); opacity: 1;}
     100% {color: white; filter: blur(0px)}
 }
 

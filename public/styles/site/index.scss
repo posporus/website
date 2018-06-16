@@ -2,10 +2,11 @@
 body {
   //position: absolute;
   //background: black url('/images/background.jpg') cover fixed no-repeat center center;
-  background-color: black;//rgb(41, 47, 51);
+  background-color: #cd472a;//black;//rgb(41, 47, 51);
 
-  color:white;
+  color:#33292a;
   font-family: 'helvetia', cursive;
+  //min-height: 100vw;
 
 
 }
@@ -13,7 +14,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-image: url('/images/background.jpg');
+  background-image: url('/vector/xplode.svg');
   background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
