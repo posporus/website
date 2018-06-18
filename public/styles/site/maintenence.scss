@@ -5,6 +5,18 @@
     //src: url('./../fonts/dejavusans.ttf');
 }
 
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#firstpage {
+  background-color: red;
+}
+#secondpage {
+  background-color: blue;
+}
+/*
 
 $mwidth: 70vw;
 $mheight: 90vh;
@@ -39,21 +51,14 @@ $fsize: 4vw;
     margin-left: -$mwidth/2;
   }
 //}
-/*
-@media (max-width: 450px){
-  .maintenence {
-    width: 90vw;
-    margin-left: -45vw;
-  }
-}
-*/
+
 .caption {
   position: relative;
   color: white;
   width: 100%;
   font-size: $fsize;
 
-  font-family: /*'DejaVu Sans',*/'DeJaVuDL', sans-serif;
+  font-family: 'DeJaVuDL', sans-serif;
   text-align: center;
   //font-weight: bold;
   animation-name: fadein;
@@ -88,9 +93,7 @@ $fsize: 4vw;
 .social p, .social a {
   display: inline-block;
 }
-/*.social p {
-  margin-right: 10px;
-}*/
+
 .bottomlinks {
   position: absolute;
   width: 100%;
@@ -118,3 +121,4 @@ $fsize: 4vw;
     90%  {opacity: 0;}
     100% {opacity: 1;}
 }
+*/
