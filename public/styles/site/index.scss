@@ -1,11 +1,15 @@
-
+@font-face {
+    font-family: DeJaVuDL;
+    src: url('./../fonts/dejavusans-bold-webfont.woff');
+    //src: url('./../fonts/dejavusans.ttf');
+}
 body {
   //position: absolute;
   //background: black url('/images/background.jpg') cover fixed no-repeat center center;
   background-color: #cd472a;//black;//rgb(41, 47, 51);
 
   color:#33292a;
-  font-family: 'helvetia', cursive;
+  font-family: 'DeJaVuDL', sans-serif;
   //min-height: 100vw;
 
 

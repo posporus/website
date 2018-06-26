@@ -2,11 +2,80 @@
 
   console.log($("#secondpage").offset(),$(window).scrollTop());
 })*/
-$(window).scroll(function(){
+/*$(window).scroll(function(){
   //console.log(translatePos("#thirdpage",0,255))
   $("#secondpage").css('background-color','rgba(0,0,0,'+translatePos("#secondpage",0,1)+')')
   //translatePos("#secondpage",50,255);
+});*/
+
+$(document).ready(function() {
+
+  //lockedAllowed = window.screen.lockOrientation(portrait);
+
+  vidsize();
+  $(window).resize(function(){
+    vidsize();
+    //console.log("resize")
+  });
+
+  var currentslide = 1;
+	$('#fullpage').fullpage({
+    controlArrows: true,
+    loopHorizontal: false,
+    fixedElements: '.bottomlinks',
+    onLeave: function(){
+      $('.arrowUp').fadeOut(100);
+      $('.arrowDown').fadeOut(100);
+    },
+    afterLoad: function(a,i) {
+      currentslide = i;
+      if(i == 1) {
+        $('.arrowUp').fadeOut(100);
+        $('.arrowDown').fadeIn(100);
+      }
+      if(i == 2) {
+        $('.arrowUp').fadeIn(100);
+        $('.arrowDown').fadeOut(100);
+      }
+      /*else {
+        $('.arrowUp').fadeIn(100);
+        $('.arrowDown').fadeIn(100);
+      }*/
+    }
+  });
+
+  //FULLPAGE Arrows
+    $('.arrowUp').click(function(){
+        $.fn.fullpage.moveSectionUp();
+    });
+
+    $('.arrowDown').click(function(){
+        $.fn.fullpage.moveSectionDown();
+    });
+    $.fn.fullpage.afterLoad(function(index){
+      alert(index)
+    });
+//Move section up on video end.
+  var video = videojs('my-player').ready(function(){
+  var player = this;
+
+    player.on('ended', function() {
+      $.fn.fullpage.moveSectionUp();
+    });
+  });
+
+
 });
+
+function vidsize() {
+  var playerwidth = $(window).width();//*0.5;
+  var playerheight = $(window).height();//*0.5625;
+  $('#teaser video').css({
+    width:playerwidth,
+    height:playerheight
+  });
+  console.log(playerwidth,playerheight)
+}
 
 function translatePos(element,minvalue,maxvalue) {
 
@@ -32,7 +101,7 @@ function translatePos(element,minvalue,maxvalue) {
 
 }
 
-//SMOOTH SCROLL
+//---------------SMOOTH SCROLL-------------------
 //focus auskommentiert, weil blauer rahmen erzeugt wurde
 //rest muss ich nicht verstehen
 

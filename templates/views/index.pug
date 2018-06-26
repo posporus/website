@@ -3,6 +3,61 @@ extends ../layouts/default
 
 block content
 
+	#fullpage
+		.section
+			.slide
+				.contentframe#firstpage
+					img(src="vector/xplodingheart.svg" class="logo")
+					p GREAT THINGS WILL HAPPEN.
+					.social
+						//p stay tuned :
+						a(href="https://www.instagram.com/pietpeng" target="_blank"): img(src="/vector/instagram_b.svg")
+						a(href="https://twitter.com/pietpeng" target="_blank"): img(src="/vector/twitter_b.svg")
+						a(href="https://soundcloud.com/pietpeng" target="_blank"): img(src="/vector/soundcloud_b.svg")
+		.section
+			.slide
+				.contentframe#intro
+					p#hello
+						| Hello, my name is&nbsp;
+						span#peng PIET PENG
+						|  and
+					p#love I love producing electronic music.
+					//#videocontainer
+						video(id="my-player" class="video-js vjs-big-play-centered vjs-default-skin" poster="/images/000000-1.png" controls preload="auto" data-setup='{"fluid":true, "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=ALzMI1z6Os0"}] }')
+
+
+			.slide
+				.contentframe#soundcloud
+					p#pick I did a lot of stuff in the past. Here's a pick:
+					.mediacontainer
+						<iframe width="100%" height="400px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/548420118&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+					p#follow follow me:
+					a(href="https://soundcloud.com/pietpeng" target="_blank"): img(src="/vector/soundcloud_b.svg")
+			.slide
+				.contentframe#instagram
+					p#watch You can actually watch me doing things
+					p#do (or watch things that I do).
+					.mediacontainer
+						<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/e1adb2e4d2ff5b1ab081f26ed78174e3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+					p#follow follow me:
+					a(href="https://www.instagram.com/pietpeng" target="_blank"): img(src="/vector/instagram_b.svg")
+			.slide
+				.contentframe#video
+					.mediacontainer
+						video(id="my-player" class="video-js vjs-big-play-centered vjs-default-skin" poster="/images/000000-1.png" controls preload="auto" data-setup='{"fluid":true, "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=XEonEGsnvT4"}] }')
+					p GREAT THINGS WILL HAPPEN.
+					.social
+						p stay tuned
+						a(href="https://www.instagram.com/pietpeng" target="_blank"): img(src="/vector/instagram_b.svg")
+						a(href="https://twitter.com/pietpeng" target="_blank"): img(src="/vector/twitter_b.svg")
+						a(href="https://soundcloud.com/pietpeng" target="_blank"): img(src="/vector/soundcloud_b.svg")
+	.arrowUp
+	.arrowDown
+
+	.bottomlinks
+		a(href="/impressum" id="imprint") impressum
+		a(href="mailto:contact@pietpeng.com" id="contact") contact@pietpeng.com
+//-
 	#firstpage.page
 		img(src="vector/xplodingheart.svg" class="logo")
 		a(href="#secondpage") secondpage
